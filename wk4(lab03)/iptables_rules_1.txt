@@ -1,0 +1,88 @@
+
+kusha@Kushal MINGW64 ~
+$ ssh root@159.203.39.243
+root@159.203.39.243's password:
+Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.4.0-122-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Jan 30 00:21:51 UTC 2024
+
+  System load:  0.0                Users logged in:       0
+  Usage of /:   10.2% of 24.05GB   IPv4 address for eth0: 159.203.39.243
+  Memory usage: 24%                IPv4 address for eth0: 10.20.0.5
+  Swap usage:   0%                 IPv4 address for eth1: 10.118.0.2
+  Processes:    114
+
+70 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+
+1 updates could not be installed automatically. For more details,
+see /var/log/unattended-upgrades/unattended-upgrades.log
+
+*** System restart required ***
+Last login: Sat Jan 20 22:52:51 2024 from 99.238.213.216
+root@comp3134-winter-2024-intro-to-cybersecurity:~# man iptables
+root@comp3134-winter-2024-intro-to-cybersecurity:~# apt-get update
+Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Hit:2 http://mirrors.digitalocean.com/ubuntu focal InRelease
+Get:3 http://mirrors.digitalocean.com/ubuntu focal-updates InRelease [114 kB]
+Hit:4 https://repos-droplet.digitalocean.com/apt/droplet-agent main InRelease
+Hit:5 http://mirrors.digitalocean.com/ubuntu focal-backports InRelease
+Get:6 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [2679 kB]
+Get:7 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [410 kB]
+Get:8 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [934 kB]
+Get:9 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 Packages [3058 kB]
+Get:10 http://mirrors.digitalocean.com/ubuntu focal-updates/main Translation-en [493 kB]
+Get:11 http://mirrors.digitalocean.com/ubuntu focal-updates/universe amd64 Packages [1159 kB]
+Get:12 http://mirrors.digitalocean.com/ubuntu focal-updates/universe Translation-en [278 kB]
+Fetched 9239 kB in 3s (3130 kB/s)
+Reading package lists... Done
+root@comp3134-winter-2024-intro-to-cybersecurity:~# apt-get install iptables
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  libip4tc2 libip6tc2 libxtables12
+Suggested packages:
+  firewalld nftables
+The following packages will be upgraded:
+  iptables libip4tc2 libip6tc2 libxtables12
+4 upgraded, 0 newly installed, 0 to remove and 66 not upgraded.
+Need to get 458 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 iptables amd64 1.8.4-3ubuntu2.1 [390 kB]
+Get:2 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 libxtables12 amd64 1.8.4-3ubuntu2.1 [28.7 kB]
+Get:3 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 libip6tc2 amd64 1.8.4-3ubuntu2.1 [19.4 kB]
+Get:4 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 libip4tc2 amd64 1.8.4-3ubuntu2.1 [19.1 kB]
+Fetched 458 kB in 0s (2334 kB/s)
+(Reading database ... 95000 files and directories currently installed.)
+Preparing to unpack .../iptables_1.8.4-3ubuntu2.1_amd64.deb ...
+Unpacking iptables (1.8.4-3ubuntu2.1) over (1.8.4-3ubuntu2) ...
+Preparing to unpack .../libxtables12_1.8.4-3ubuntu2.1_amd64.deb ...
+Unpacking libxtables12:amd64 (1.8.4-3ubuntu2.1) over (1.8.4-3ubuntu2) ...
+Preparing to unpack .../libip6tc2_1.8.4-3ubuntu2.1_amd64.deb ...
+Unpacking libip6tc2:amd64 (1.8.4-3ubuntu2.1) over (1.8.4-3ubuntu2) ...
+Preparing to unpack .../libip4tc2_1.8.4-3ubuntu2.1_amd64.deb ...
+Unpacking libip4tc2:amd64 (1.8.4-3ubuntu2.1) over (1.8.4-3ubuntu2) ...
+Setting up libip4tc2:amd64 (1.8.4-3ubuntu2.1) ...
+Setting up libip6tc2:amd64 (1.8.4-3ubuntu2.1) ...
+Setting up libxtables12:amd64 (1.8.4-3ubuntu2.1) ...
+Setting up iptables (1.8.4-3ubuntu2.1) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.14) ...
+root@comp3134-winter-2024-intro-to-cybersecurity:~# iptables -L -v
+Chain INPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination     
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination     
+
+Chain OUTPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination     
+root@comp3134-winter-2024-intro-to-cybersecurity:~#

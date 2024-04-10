@@ -1,0 +1,52 @@
+root@comp3134-winter-2024-intro-to-cybersecurity:~# sudo tcpdump -i any udp -c 10 -nn
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on any, link-type LINUX_SLL (Linux cooked v1), capture size 262144 bytes
+^C
+0 packets captured
+0 packets received by filter
+0 packets dropped by kernel
+root@comp3134-winter-2024-intro-to-cybersecurity:~# sudo tcpdump -i any udp -c 10 -nn
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on any, link-type LINUX_SLL (Linux cooked v1), capture size 262144 bytes
+00:24:51.245990 IP 185.94.111.1.41586 > 159.203.39.243.53: 12058+ [1au] ANY? com. (32)
+^C
+1 packet captured
+1 packet received by filter
+0 packets dropped by kernel
+root@comp3134-winter-2024-intro-to-cybersecurity:~# sudo tcpdump -i any udp -c 10 -nn
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on any, link-type LINUX_SLL (Linux cooked v1), capture size 262144 bytes
+00:26:19.455535 IP 85.159.230.245.44771 > 159.203.39.243.8000: UDP, length 97
+00:27:08.379076 IP 147.182.198.246.37794 > 159.203.39.243.8081: UDP, length 41
+^C
+2 packets captured
+2 packets received by filter
+0 packets dropped by kernel
+root@comp3134-winter-2024-intro-to-cybersecurity:~# sudo tcpdump -i any udp -c 10 -nn
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on any, link-type LINUX_SLL (Linux cooked v1), capture size 262144 bytes
+
+00:36:44.886889 IP 65.49.1.89.31839 > 159.203.39.243.137: UDP, length 50
+00:39:36.220704 IP 209.127.54.10.30301 > 159.203.39.243.8083: UDP, length 24
+00:40:46.436876 IP 162.142.125.93.10512 > 159.203.39.243.53413: UDP, length 18
+00:40:55.390114 IP 185.142.236.36.32064 > 159.203.39.243.389: UDP, length 51
+00:41:03.294034 IP 65.49.1.52.9704 > 159.203.39.243.53: 64206+ A? dnsscan.shadowserver.org. (42)
+00:44:19.223361 IP 64.62.197.152.29668 > 159.203.39.243.5351: UDP, length 2
+00:44:38.461979 IP 35.203.210.54.51984 > 159.203.39.243.15353: UDP, length 46
+00:50:28.394421 IP 159.203.39.243.36174 > 185.125.190.57.123: NTPv4, Client, length 48
+00:50:28.480563 IP 185.125.190.57.123 > 159.203.39.243.36174: NTPv4, Server, length 48
+00:50:54.938570 IP 192.241.196.121.44728 > 159.203.39.243.53: 13551+ TXT CHAOS? VERSION.BIND. (30)
+10 packets captured
+10 packets received by filter
+0 packets dropped by kernel
+root@comp3134-winter-2024-intro-to-cybersecurity:~#
+root@comp3134-winter-2024-intro-to-cybersecurity:~# sudo tcpdump -i any udp -c 10 -nn
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on any, link-type LINUX_SLL (Linux cooked v1), capture size 262144 bytes
+01:12:21.700225 IP 217.145.132.13.10992 > 159.203.39.243.5060: SIP
+01:13:05.157655 IP 91.92.246.84.40708 > 159.203.39.243.1900: UDP, length 84
+^C
+2 packets captured
+2 packets received by filter
+0 packets dropped by kernel
+root@comp3134-winter-2024-intro-to-cybersecurity:~#
